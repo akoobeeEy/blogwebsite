@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply text-sm md:text-base;
+  }
+  .nav-btn {
+    @apply px-12 py-3 text-black bg-white rounded-md;
+  }
+  .login-input {
+    @apply p-6 bg-white border-[1px] border-gray-100 outline-none;
+  }
+  .login-title {
+    @apply text-2xl font-bold md:text-5xl text-bgBlack;
+  }
+  .login-btn {
+    @apply text-base font-bold md:text-2xl text-bgBlack;
+  }
+  .all-btn {
+    @apply px-12 py-4 duration-200 bg-white rounded-md text-bgBlack hover:bg-hoverBg hover:text-white;
+  }
+  .title {
+    @apply text-base font-bold text-black md:text-3xl;
+  }
+  .bannerIcon {
+    @apply inline-flex items-center justify-center w-16 h-16 text-xl text-gray-200 transition-all duration-300 bg-black bg-opacity-25 rounded-md cursor-pointer shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 hover:text-hoverBg;
+}
+}
+
+.nav-link.active {
+  color: #ffd050;
+}
